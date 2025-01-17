@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: rubik, sans-serif;
+    font-family: inter;
 }
 
 .underLine{
     text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
 }
 
 body {
@@ -20,6 +27,7 @@ header {
     width: 100%;
     padding: 20px;
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -79,6 +87,9 @@ nav a {
 /* Seccion Presentacion */
 
 .hero {
+    background-image: url(../assets/img/Theme_White.jpg);
+    background-position: center center;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +103,6 @@ nav a {
     flex-direction: column;
     align-items: start;
     gap: 1.5rem;
-    padding-bottom: 5rem;
 }
 
 .hero h1 {
@@ -107,11 +117,13 @@ nav a {
 
 .highlight {
     color: #FFC515;
-    transition: all 200ms;
+    transition-duration: 200ms;
+    transition-property: color;
 }
 
 .blured {
-    transition: all 200ms;
+    transition-duration: 200ms;
+    transition-property: filter;
 }
 
 .blured:hover {
@@ -120,7 +132,8 @@ nav a {
 }
 
 .goldShadow {
-    transition: all 200ms;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
 }
 
 .goldShadow:hover {
@@ -145,12 +158,17 @@ nav a {
     font-size: 4rem;
     color: #555;
     text-align: start;
-    font-weight: 600
-    ;
+    font-weight: 600;
 }
 
 .isoAvalan {
-    height: 4rem;
+    height: 3.5rem;
+}
+
+.isoAvalanContainer {
+    padding-top: 20px;
+    height: fit-content;
+    justify-content: center;
 }
 
 /* Boton CTA */
@@ -163,12 +181,13 @@ nav a {
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
-    transition: all 0.3s;
+    transition-duration: 0.3s;
+    transition-property: filter;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 
@@ -248,7 +267,7 @@ a {
     font-weight: 500;
 }
 
-/*  */
+/* FOOTER */
 
 footer {
     display: flex;
@@ -268,6 +287,10 @@ footer {
     text-align: center;
     justify-content: center;
     height: fit-content;
+}
+
+.instagramBtn {
+    color: black;
 }
 
 .tagline {
@@ -305,6 +328,10 @@ footer {
     }
 
     /* Seccion Presentacion */
+
+    .hero{
+    background-image: url(../assets/img/Theme_Black.jpg);
+    }
 
     .hero h1 {
         font-size: 4rem;
@@ -385,4 +412,75 @@ footer {
         background-color: #1f1f1f;
     }
 
+    .instagramBtn {
+        color: white;
+    }
+
+}
+
+/* Tamanos de pantalla */
+
+@media 
+(max-width: 1630px) {
+
+    /* Inicio */
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero .slogan {
+        font-size: 3rem;
+    }
+
+    .isoAvalanContainer{
+        padding-top: 1rem;
+    }
+
+    .isoAvalan{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .aboutText {
+        width: 40rem;
+    }
+
+    .serviceCard {
+        width: 25rem;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .aboutTitle {
+        font-size: 2.5rem;
+    }
+
+    /* Services Section */
+
+    .serviceCardContainer{
+        flex-direction: column;
+    }
+}
+@media (max-width: 630px){
+    .hero{
+        padding: 0 2rem;
+        font-size: 2rem;
+    }
+
+    .hero .slogan {
+        font-size: 2rem;
+        text-wrap: nowrap;
+    }
+
+    .isoAvalanContainer{
+        padding-top: 1rem;
+    }
+
+    .isoAvalan{
+        width: 2rem;
+        height: 2rem;
+    }
+    
 }
