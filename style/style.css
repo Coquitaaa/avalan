@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: rubik, sans-serif;
+}
+
+.underLine{
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logoContainer {
+    display: flex;
+    text-align: center;
+}
+
+.mainLogo {
+    height: 1.5rem;
+    padding-bottom: .25rem;
+}
+
+.logoDark {
+    display: none;
+}
+
+.logoLight {
+    display: block;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li{
+    height: fit-content;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #FFC515;
+    filter: drop-shadow(1px 1px 10px #FFC515);
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: all 200ms;
+}
+
+/* Seccion Presentacion */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #000;
+    text-align: start;
+}
+
+.hero .highlight {
+    color: #FFC515;
+}
+
+.highlight {
+    color: #FFC515;
+    transition: all 200ms;
+}
+
+.blured {
+    transition: all 200ms;
+}
+
+.blured:hover {
+    filter: blur(2px);
+    
+}
+
+.goldShadow {
+    transition: all 200ms;
+}
+
+.goldShadow:hover {
+    filter: drop-shadow(1px 1px 10px #FFC515);
+}
+
+.shadow {
+    transition: all 200ms;
+}
+
+.shadow:hover {
+    filter: drop-shadow(-10px 10px 5px rgb(223, 223, 223));
+}
+
+.sloganContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero .slogan {
+    font-size: 4rem;
+    color: #555;
+    text-align: start;
+    font-weight: 600
+    ;
+}
+
+.isoAvalan {
+    height: 4rem;
+}
+
+/* Boton CTA */
+
+.ctaButton {
+    background-color: #FFC515;
+    color: #fff;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+/* ABOUT SECTION */
+
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 50rem;
+    gap: 3rem;
+    padding-top: 10rem;
+    background-color: #f5f5f5;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.aboutText {
+    font-size: 24px;
+    width: 50rem;
+    text-align: center;
+    align-self: center;
+}
+
+/* SERVICIOS SECCION */
+
+.servicesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8rem;
+}
+
+.servicesSection h2 {
+    font-size: 3rem;
+    padding: 5rem 0;
+    padding-bottom: 7rem;
+}
+
+.serviceCardContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 0;
+    gap: 5rem;
+}
+
+.serviceTitle {
+    padding: .25rem 0;
+    padding-bottom: 1rem;
+}
+
+.serviceCard {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: all 200ms;
+}
+
+.serviceCard:hover {
+    scale: 1.05;
+}
+
+.serviceCard p {
+    text-align: left;
+    padding: .5rem;
+    font-weight: 500;
+}
+
+/*  */
+
+footer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    gap: 2rem;
+}
+
+.footer-logo img {
+    height: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.tagline {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* MEDIA QUERYS */
+
+/* Preferencias de color */
+
+@media (prefers-color-scheme: dark) {
+
+    .logoLight {
+        display: none;
+    }
+
+    .logoDark {
+        display: block;
+    }
+
+    .shadow:hover {
+        filter: drop-shadow(-10px 10px 5px black);
+    }
+
+    body {
+        background-color: rgb(17, 17, 17);
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        transition: all 200ms;
+    }
+
+    /* Seccion Presentacion */
+
+    .hero h1 {
+        font-size: 4rem;
+        color: #ffffff;
+        text-align: start;
+    }
+
+    .hero .slogan {
+        font-size: 4rem;
+        color: #bcbcbc;
+        text-align: start;
+        font-weight: 600
+        ;
+    }
+
+    /* ABOUT SECTION */
+
+    .aboutSection {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 50rem;
+        gap: 3rem;
+        padding-top: 10rem;
+        background-color: #141414;
+    }
+
+    .aboutTitle {
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .aboutText {
+        color: white;
+        font-size: 24px;
+        width: 50rem;
+        text-align: center;
+        align-self: center;
+    }
+
+    /* SERVICE SECTION */
+
+    .servicesSection h2 {
+        color: white;
+        font-size: 3rem;
+        padding: 5rem 0;
+        padding-bottom: 7rem;
+    }
+
+    .serviceCard {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #1f1f1f;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .serviceCard p {
+        color: white;
+        text-align: left;
+        padding: .5rem;
+        font-weight: 500;
+    }
+
+    /* CONTACT SECTION */
+
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #1f1f1f;
+    }
+
+}
